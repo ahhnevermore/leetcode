@@ -10,11 +10,9 @@ public:
             unsigned char c = s[i];
             if(seen[c]>=0){
                 longest =std::max(longest, right-left);
-                left= std::max(left,seen[c]+1);
-                seen[c]=i;
-            }else{
-                seen[c]=i;
+                left= std::max(left,seen[c]+1);   
             }
+            seen[c]=i;
             right++;
         }
         longest =std::max(longest, right-left);
